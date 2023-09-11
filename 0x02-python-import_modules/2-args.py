@@ -9,5 +9,5 @@ if __name__ == "__main__":
 	 ":" if argc != 0 else "."
 	 ))
     if argc > 0:
-	for i in range(argc):
+        for i in range(argc):
 	    print("{}: {}".format(i + 1, argv[i]))
