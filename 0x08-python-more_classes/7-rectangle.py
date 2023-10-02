@@ -6,6 +6,7 @@ class Rectangle:
     """The attributes and methods in Recatangle class."""
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Intialize a new Rectangle.
@@ -85,8 +86,8 @@ class Rectangle:
             return rec_str
         else:
             for _ in range(self.__height - 1):
-                rec_str += "#" * self.__width + "\n"
-            rec_str += "#" * self.__width
+                rec_str += str(self.print_symbol) * self.__width + "\n"
+            rec_str += str(self.print_symbol) * self.__width
             return rec_str
 
     def __repr__(self):
@@ -98,3 +99,4 @@ class Rectangle:
         """Print custom message when deleted."""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
+
