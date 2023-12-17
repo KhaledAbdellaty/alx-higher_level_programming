@@ -12,9 +12,8 @@ if __name__ == "__main__":
                  cities INNER JOIN states ON states.id=cities.state_id WHERE
                  states.name=%s ORDER BY cities.id ASC''', (sys.argv[4], ))
     query_row = curs.fetchall()
-    for row in query_row:
-        print(row[1], end=", ")
-    print()
+    cities = [row[1] for row in query_row]
+    print(*cities, sep=", ")
 
     curs.close()
     conn.close()
