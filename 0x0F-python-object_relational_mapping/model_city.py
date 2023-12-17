@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 """Definition of a City and an instance Base = declarative_base()"""
-from sqlalchemy import Column, Integer, String, MetaData
+from model_state import Base
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
-
-mymetadata = MetaData()
-Base = declarative_base(metadata=mymetadata)
 
 
 class City(Base):
